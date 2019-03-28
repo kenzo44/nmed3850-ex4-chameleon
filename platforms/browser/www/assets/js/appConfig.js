@@ -29,8 +29,8 @@ function init() {
         x += event.beta;
         z += event.alpha;
 
-        r = map(x, 0, 180, 100, 175);
-        g = map(y, 0, 90, 100, 200);
+        r = map(x, 0, 255, 100, 175);
+        g = map(y, 0, 255, 100, 200);
         b = map(z, 0, 255, 100, 200);
     }
 }
