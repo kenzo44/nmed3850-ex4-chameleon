@@ -25,13 +25,13 @@ function init() {
     }
 
     function handleOrientation(event) {
-        x += event.gamma;
-        y += event.beta;
+        y += event.gamma;
+        x += event.beta;
         z += event.alpha;
 
-        r = map(x, -90, 90, 100, 175);
-        g = map(y, -90, 90, 100, 200);
-        b = map(z, -90, 90, 100, 200);
+        r = map(x, 0, 180, 100, 175);
+        g = map(y, 0, 90, 100, 200);
+        b = map(z, 0, 255, 100, 200);
     }
 }
 
@@ -49,7 +49,7 @@ function draw() {
     pointLight(0, 0, 255, x, y, 250);
 
     specularMaterial(250);
-    rotateX(y * 0.001);
-    rotateY(x * 0.001);
+    rotateX(x * 0.001);
+    rotateY(y * 0.001);
     box(100, 100, 100);
 }
