@@ -1,0 +1,31 @@
+/*Fonts*/
+@font-face {
+    src: url(../font/Montserrat-Regular.ttf);
+    font-family: Montserrat;
+}
+
+@font-face {
+    src: url(../font/OpenSans-Regular.ttf);
+    font-family: Openssans;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+.page-content{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.navbar{
+    font-family: Montserrat !important;
+    background: linear-gradient(45deg, #02a3cf 0%, rgba(2, 163, 207, 0) 70%), linear-gradient(135deg, #00d67d 10%, rgba(0, 214, 125, 0) 80%), linear-gradient(225deg, #01d062 10%, rgba(1, 208, 98, 0) 80%), linear-gradient(315deg, #038ed3 100%, rgba(3, 142, 211, 0) 70%) !important;
+}
+.title{
+    font-size: 28px !important;
+}
+.right{
+    color: #333 !important;
+}

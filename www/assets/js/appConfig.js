@@ -12,6 +12,10 @@ var x = 0;
 var y = 0;
 var z = 0;
 
+var r = random(50, 255)
+var g = random(0, 200);
+var b = random(50, 255);
+
 function init() {
 
     if (window.DeviceOrientationEvent) {
@@ -23,20 +27,29 @@ function init() {
     function handleOrientation(event) {
         x += event.gamma;
         y += event.beta;
-        z += event.gamma;
+        z += event.alpha;
+
+        r = map(x, -90, 90, 100, 175);
+        g = map(y, -90, 90, 100, 200);
+        b = map(z, -90, 90, 100, 200);
     }
 }
 
 function setup() {
     var cnv = createCanvas(window.innerWidth, window.innerHeight, WEBGL);
     cnv.parent('canvas');
+
 }
 
 function draw() {
-    background(250);
-    normalMaterial();
-    rotateX(x * 100);
-    rotateY(y * 100);
-    rotateZ(z * 100);
+    background(r, g, b);
+
+    ambientLight(50);
+    directionalLight(255, 0, 0, 0.25, 0.25, 0);
+    pointLight(0, 0, 255, x, y, 250);
+
+    specularMaterial(250);
+    rotateX(y * 0.001);
+    rotateY(x * 0.001);
     box(100, 100, 100);
 }
