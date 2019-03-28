@@ -4,36 +4,29 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title>P1</title>
+    <title>Chameleon</title>
 
     <!--Framework 7 Stylesheet-->
     <link rel="stylesheet" href="assets/css/framework7.min.css">
     <link rel="stylesheet" href="assets/css/display.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
     <div id="app">
         <div class="view view-main">
-
             <div class="page" data-name="home">
 
-                <div class="navbar">
+                <!-- Top Navbar -->
+                <div class="navbar no-shadow">
                     <div class="navbar-inner">
-                        <div class="left"><a href="#" data-panel="left" class="panel-open">Left</a></div>
-                        <div class="right"><a href="#" data-panel="right" class="panel-open">Right</a></div>
+                        <div class="title"><i class="fas fa-dragon"></i> Chameleon</div>
+                        <div class="right" style="margin-right: 16px;"><i class="fas fa-sync-alt smallLogo" onclick="freshStart()"></i></div>
                     </div>
                 </div>
 
                 <div class="page-content">
-                    <br><br>
-                    <div class="info">
-                        Alpha: <div id="alpha"></div>
-                        Beta: <div id="beta"></div>
-                        Gamma: <div id="gamma"></div>
-                    </div>
                     <div id="canvas">
 
                     </div>
@@ -46,12 +39,17 @@
         <!--end main view-->
     </div>
     <!--end app-->
+    <script>
+        function freshStart() {
+            window.location.reload();
+        }
+    </script>
     <script type="text/javascript" src="cordova.js"></script>
     <!--Framework 7-->
     <script type="text/javascript" src="assets/js/framework7.min.js"></script>
     <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="assets/js/scripts.js"></script>
-
+    <script type="text/javascript" src="assets/js/appConfig.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
 </body>
 
 </html>
